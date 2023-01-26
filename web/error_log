@@ -1,0 +1,888 @@
+[23-Feb-2022 22:06:42 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=loca...', 'u7380920_pgrpn', '#pgrpn123123', NULL)
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(459): yii\db\ActiveRecord::getTableSchema()
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(178): yii\db\ActiveRecord::primaryKey()
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(1)
+#15 /home/u7380920/public_html/panguripan.com/backend/models/BackendUser.php(103): yii\db\BaseActiveRecord::findOne(1)
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(700): app\models\BackendUser::findIdentity(1)
+#17 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#18 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#20 /home/u7380920/public_html/panguripan.com/backend/views/layouts/main.php(44): yii\base\Component->__get('isGuest')
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(348): require('/home/u7380920/...')
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/u7380920/...', Array)
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/u7380920/...', Array, Object(app\controllers\SiteController))
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#25 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#26 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#27 [internal function]: yii\web\ErrorAction->run()
+#28 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#29 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#30 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#31 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#32 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#33 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#34 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(459): yii\db\ActiveRecord::getTableSchema()
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(178): yii\db\ActiveRecord::primaryKey()
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(1)
+#13 /home/u7380920/public_html/panguripan.com/backend/models/BackendUser.php(103): yii\db\BaseActiveRecord::findOne(1)
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(700): app\models\BackendUser::findIdentity(1)
+#15 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#17 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#18 /home/u7380920/public_html/panguripan.com/backend/views/layouts/main.php(44): yii\base\Component->__get('isGuest')
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(348): require('/home/u7380920/...')
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/u7380920/...', Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/u7380920/...', Array, Object(app\controllers\SiteController))
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#25 [internal function]: yii\web\ErrorAction->run()
+#26 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#27 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#28 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#29 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#30 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#31 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#32 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=loca...', 'u7380920_pgrpn', '#pgrpn123123', NULL)
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('penjualan_kotor...')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('penjualan_kotor...', 'schema', false)
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('penjualan_kotor...')
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('subtotal')
+#15 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/validators/Validator.php(258): yii\db\BaseActiveRecord->__get('subtotal')
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\PenjualanKotor), Array)
+#17 /home/u7380920/public_html/panguripan.com/backend/models/PenjualanKotor.php(56): yii\base\Model->validate()
+#18 /home/u7380920/public_html/panguripan.com/backend/controllers/PenjualanKotorController.php(12): app\models\PenjualanKotor->search(Array)
+#19 [internal function]: app\controllers\PenjualanKotorController->actionIndex()
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('penjualan-kotor', Array)
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/u7380920/public_html/panguripan.com/backend/web/index.php(12): yii\base\Application->run()
+#26 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('penjualan_kotor...')
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('penjualan_kotor...', 'schema', false)
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('penjualan_kotor...')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('subtotal')
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/validators/Validator.php(258): yii\db\BaseActiveRecord->__get('subtotal')
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\PenjualanKotor), Array)
+#15 /home/u7380920/public_html/panguripan.com/backend/models/PenjualanKotor.php(56): yii\base\Model->validate()
+#16 /home/u7380920/public_html/panguripan.com/backend/controllers/PenjualanKotorController.php(12): app\models\PenjualanKotor->search(Array)
+#17 [internal function]: app\controllers\PenjualanKotorController->actionIndex()
+#18 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('penjualan-kotor', Array)
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/u7380920/public_html/panguripan.com/backend/web/index.php(12): yii\base\Application->run()
+#24 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+[23-Feb-2022 22:06:55 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=loca...', 'u7380920_pgrpn', '#pgrpn123123', NULL)
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(459): yii\db\ActiveRecord::getTableSchema()
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(178): yii\db\ActiveRecord::primaryKey()
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(1)
+#15 /home/u7380920/public_html/panguripan.com/backend/models/BackendUser.php(103): yii\db\BaseActiveRecord::findOne(1)
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(700): app\models\BackendUser::findIdentity(1)
+#17 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#18 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#20 /home/u7380920/public_html/panguripan.com/backend/views/layouts/main.php(44): yii\base\Component->__get('isGuest')
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(348): require('/home/u7380920/...')
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/u7380920/...', Array)
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/u7380920/...', Array, Object(app\controllers\SiteController))
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#25 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#26 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#27 [internal function]: yii\web\ErrorAction->run()
+#28 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#29 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#30 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#31 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#32 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#33 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#34 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(459): yii\db\ActiveRecord::getTableSchema()
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(178): yii\db\ActiveRecord::primaryKey()
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(1)
+#13 /home/u7380920/public_html/panguripan.com/backend/models/BackendUser.php(103): yii\db\BaseActiveRecord::findOne(1)
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(700): app\models\BackendUser::findIdentity(1)
+#15 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#17 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#18 /home/u7380920/public_html/panguripan.com/backend/views/layouts/main.php(44): yii\base\Component->__get('isGuest')
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(348): require('/home/u7380920/...')
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/u7380920/...', Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/u7380920/...', Array, Object(app\controllers\SiteController))
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#25 [internal function]: yii\web\ErrorAction->run()
+#26 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#27 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#28 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#29 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#30 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#31 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#32 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=loca...', 'u7380920_pgrpn', '#pgrpn123123', NULL)
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('penjualan_kotor...')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('penjualan_kotor...', 'schema', false)
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('penjualan_kotor...')
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('subtotal')
+#15 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/validators/Validator.php(258): yii\db\BaseActiveRecord->__get('subtotal')
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\PenjualanKotor), Array)
+#17 /home/u7380920/public_html/panguripan.com/backend/models/PenjualanKotor.php(56): yii\base\Model->validate()
+#18 /home/u7380920/public_html/panguripan.com/backend/controllers/PenjualanKotorController.php(12): app\models\PenjualanKotor->search(Array)
+#19 [internal function]: app\controllers\PenjualanKotorController->actionIndex()
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('penjualan-kotor', Array)
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/u7380920/public_html/panguripan.com/backend/web/index.php(12): yii\base\Application->run()
+#26 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('penjualan_kotor...')
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('penjualan_kotor...', 'schema', false)
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('penjualan_kotor...')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('subtotal')
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/validators/Validator.php(258): yii\db\BaseActiveRecord->__get('subtotal')
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\PenjualanKotor), Array)
+#15 /home/u7380920/public_html/panguripan.com/backend/models/PenjualanKotor.php(56): yii\base\Model->validate()
+#16 /home/u7380920/public_html/panguripan.com/backend/controllers/PenjualanKotorController.php(12): app\models\PenjualanKotor->search(Array)
+#17 [internal function]: app\controllers\PenjualanKotorController->actionIndex()
+#18 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('penjualan-kotor', Array)
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/u7380920/public_html/panguripan.com/backend/web/index.php(12): yii\base\Application->run()
+#24 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+[23-Feb-2022 22:06:58 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=loca...', 'u7380920_pgrpn', '#pgrpn123123', NULL)
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(459): yii\db\ActiveRecord::getTableSchema()
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(178): yii\db\ActiveRecord::primaryKey()
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(1)
+#15 /home/u7380920/public_html/panguripan.com/backend/models/BackendUser.php(103): yii\db\BaseActiveRecord::findOne(1)
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(700): app\models\BackendUser::findIdentity(1)
+#17 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#18 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#20 /home/u7380920/public_html/panguripan.com/backend/views/layouts/main.php(44): yii\base\Component->__get('isGuest')
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(348): require('/home/u7380920/...')
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/u7380920/...', Array)
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/u7380920/...', Array, Object(app\controllers\SiteController))
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#25 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#26 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#27 [internal function]: yii\web\ErrorAction->run()
+#28 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#29 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#30 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#31 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#32 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#33 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#34 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(459): yii\db\ActiveRecord::getTableSchema()
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(178): yii\db\ActiveRecord::primaryKey()
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(1)
+#13 /home/u7380920/public_html/panguripan.com/backend/models/BackendUser.php(103): yii\db\BaseActiveRecord::findOne(1)
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(700): app\models\BackendUser::findIdentity(1)
+#15 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#17 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#18 /home/u7380920/public_html/panguripan.com/backend/views/layouts/main.php(44): yii\base\Component->__get('isGuest')
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(348): require('/home/u7380920/...')
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/u7380920/...', Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/u7380920/...', Array, Object(app\controllers\SiteController))
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#25 [internal function]: yii\web\ErrorAction->run()
+#26 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#27 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#28 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#29 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#30 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#31 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#32 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=loca...', 'u7380920_pgrpn', '#pgrpn123123', NULL)
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('penjualan_kotor...')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('penjualan_kotor...', 'schema', false)
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('penjualan_kotor...')
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('subtotal')
+#15 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/validators/Validator.php(258): yii\db\BaseActiveRecord->__get('subtotal')
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\PenjualanKotor), Array)
+#17 /home/u7380920/public_html/panguripan.com/backend/models/PenjualanKotor.php(56): yii\base\Model->validate()
+#18 /home/u7380920/public_html/panguripan.com/backend/controllers/PenjualanKotorController.php(12): app\models\PenjualanKotor->search(Array)
+#19 [internal function]: app\controllers\PenjualanKotorController->actionIndex()
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('penjualan-kotor', Array)
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/u7380920/public_html/panguripan.com/backend/web/index.php(12): yii\base\Application->run()
+#26 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('penjualan_kotor...')
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('penjualan_kotor...', 'schema', false)
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('penjualan_kotor...')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('subtotal')
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/validators/Validator.php(258): yii\db\BaseActiveRecord->__get('subtotal')
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\PenjualanKotor), Array)
+#15 /home/u7380920/public_html/panguripan.com/backend/models/PenjualanKotor.php(56): yii\base\Model->validate()
+#16 /home/u7380920/public_html/panguripan.com/backend/controllers/PenjualanKotorController.php(12): app\models\PenjualanKotor->search(Array)
+#17 [internal function]: app\controllers\PenjualanKotorController->actionIndex()
+#18 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('penjualan-kotor', Array)
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/u7380920/public_html/panguripan.com/backend/web/index.php(12): yii\base\Application->run()
+#24 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+[23-Feb-2022 22:08:51 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=loca...', 'u7380920_pgrpn', '#pgrpn123123', NULL)
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(459): yii\db\ActiveRecord::getTableSchema()
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(178): yii\db\ActiveRecord::primaryKey()
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(1)
+#15 /home/u7380920/public_html/panguripan.com/backend/models/BackendUser.php(103): yii\db\BaseActiveRecord::findOne(1)
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(700): app\models\BackendUser::findIdentity(1)
+#17 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#18 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#20 /home/u7380920/public_html/panguripan.com/backend/views/layouts/main.php(44): yii\base\Component->__get('isGuest')
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(348): require('/home/u7380920/...')
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/u7380920/...', Array)
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/u7380920/...', Array, Object(app\controllers\SiteController))
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#25 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#26 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#27 [internal function]: yii\web\ErrorAction->run()
+#28 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#29 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#30 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#31 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#32 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#33 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#34 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Connection refused in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(459): yii\db\ActiveRecord::getTableSchema()
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(178): yii\db\ActiveRecord::primaryKey()
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(1)
+#13 /home/u7380920/public_html/panguripan.com/backend/models/BackendUser.php(103): yii\db\BaseActiveRecord::findOne(1)
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(700): app\models\BackendUser::findIdentity(1)
+#15 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#17 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#18 /home/u7380920/public_html/panguripan.com/backend/views/layouts/main.php(44): yii\base\Component->__get('isGuest')
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(348): require('/home/u7380920/...')
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/u7380920/...', Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/u7380920/...', Array, Object(app\controllers\SiteController))
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#25 [internal function]: yii\web\ErrorAction->run()
+#26 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#27 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#28 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#29 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#30 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#31 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#32 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection refused
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=loca...', 'u7380920_pgrpn', '#pgrpn123123', NULL)
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('penjualanv')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('penjualanv', 'schema', false)
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('penjualanv')
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(315): yii\db\BaseActiveRecord->hasAttribute('penjualan')
+#15 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(743): yii\db\BaseActiveRecord->__set('penjualan', '40')
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(872): yii\base\Model->setAttributes(Array)
+#17 /home/u7380920/public_html/panguripan.com/backend/models/Order.php(63): yii\base\Model->load(Array)
+#18 /home/u7380920/public_html/panguripan.com/backend/controllers/OrderController.php(16): app\models\Order->search(Array)
+#19 [internal function]: app\controllers\OrderController->actionIndex()
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('order', Array)
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/u7380920/public_html/panguripan.com/backend/web/index.php(12): yii\base\Application->run()
+#26 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Connection refused in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('penjualanv')
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('penjualanv', 'schema', false)
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('penjualanv')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(315): yii\db\BaseActiveRecord->hasAttribute('penjualan')
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(743): yii\db\BaseActiveRecord->__set('penjualan', '40')
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(872): yii\base\Model->setAttributes(Array)
+#15 /home/u7380920/public_html/panguripan.com/backend/models/Order.php(63): yii\base\Model->load(Array)
+#16 /home/u7380920/public_html/panguripan.com/backend/controllers/OrderController.php(16): app\models\Order->search(Array)
+#17 [internal function]: app\controllers\OrderController->actionIndex()
+#18 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('order', Array)
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/u7380920/public_html/panguripan.com/backend/web/index.php(12): yii\base\Application->run()
+#24 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection refused
+)
+
+[23-Feb-2022 22:08:57 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=loca...', 'u7380920_pgrpn', '#pgrpn123123', NULL)
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(459): yii\db\ActiveRecord::getTableSchema()
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(178): yii\db\ActiveRecord::primaryKey()
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(1)
+#15 /home/u7380920/public_html/panguripan.com/backend/models/BackendUser.php(103): yii\db\BaseActiveRecord::findOne(1)
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(700): app\models\BackendUser::findIdentity(1)
+#17 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#18 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#20 /home/u7380920/public_html/panguripan.com/backend/views/layouts/main.php(44): yii\base\Component->__get('isGuest')
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(348): require('/home/u7380920/...')
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/u7380920/...', Array)
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/u7380920/...', Array, Object(app\controllers\SiteController))
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#25 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#26 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#27 [internal function]: yii\web\ErrorAction->run()
+#28 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#29 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#30 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#31 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#32 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#33 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#34 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Connection refused in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(459): yii\db\ActiveRecord::getTableSchema()
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(178): yii\db\ActiveRecord::primaryKey()
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(1)
+#13 /home/u7380920/public_html/panguripan.com/backend/models/BackendUser.php(103): yii\db\BaseActiveRecord::findOne(1)
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(700): app\models\BackendUser::findIdentity(1)
+#15 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#17 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#18 /home/u7380920/public_html/panguripan.com/backend/views/layouts/main.php(44): yii\base\Component->__get('isGuest')
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(348): require('/home/u7380920/...')
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/u7380920/...', Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/u7380920/...', Array, Object(app\controllers\SiteController))
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#25 [internal function]: yii\web\ErrorAction->run()
+#26 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#27 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#28 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#29 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#30 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#31 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#32 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection refused
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=loca...', 'u7380920_pgrpn', '#pgrpn123123', NULL)
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('penjualanv')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('penjualanv', 'schema', false)
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('penjualanv')
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(315): yii\db\BaseActiveRecord->hasAttribute('penjualan')
+#15 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(743): yii\db\BaseActiveRecord->__set('penjualan', '40')
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(872): yii\base\Model->setAttributes(Array)
+#17 /home/u7380920/public_html/panguripan.com/backend/models/Order.php(63): yii\base\Model->load(Array)
+#18 /home/u7380920/public_html/panguripan.com/backend/controllers/OrderController.php(16): app\models\Order->search(Array)
+#19 [internal function]: app\controllers\OrderController->actionIndex()
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('order', Array)
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/u7380920/public_html/panguripan.com/backend/web/index.php(12): yii\base\Application->run()
+#26 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Connection refused in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('penjualanv')
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('penjualanv', 'schema', false)
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('penjualanv')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(315): yii\db\BaseActiveRecord->hasAttribute('penjualan')
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(743): yii\db\BaseActiveRecord->__set('penjualan', '40')
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(872): yii\base\Model->setAttributes(Array)
+#15 /home/u7380920/public_html/panguripan.com/backend/models/Order.php(63): yii\base\Model->load(Array)
+#16 /home/u7380920/public_html/panguripan.com/backend/controllers/OrderController.php(16): app\models\Order->search(Array)
+#17 [internal function]: app\controllers\OrderController->actionIndex()
+#18 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('order', Array)
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/u7380920/public_html/panguripan.com/backend/web/index.php(12): yii\base\Application->run()
+#24 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection refused
+)
+
+[23-Feb-2022 22:08:59 Asia/Jakarta] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=loca...', 'u7380920_pgrpn', '#pgrpn123123', NULL)
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(459): yii\db\ActiveRecord::getTableSchema()
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(178): yii\db\ActiveRecord::primaryKey()
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(1)
+#15 /home/u7380920/public_html/panguripan.com/backend/models/BackendUser.php(103): yii\db\BaseActiveRecord::findOne(1)
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(700): app\models\BackendUser::findIdentity(1)
+#17 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#18 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#20 /home/u7380920/public_html/panguripan.com/backend/views/layouts/main.php(44): yii\base\Component->__get('isGuest')
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(348): require('/home/u7380920/...')
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/u7380920/...', Array)
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/u7380920/...', Array, Object(app\controllers\SiteController))
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#25 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#26 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#27 [internal function]: yii\web\ErrorAction->run()
+#28 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#29 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#30 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#31 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#32 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#33 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#34 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Connection refused in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(459): yii\db\ActiveRecord::getTableSchema()
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(178): yii\db\ActiveRecord::primaryKey()
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(1)
+#13 /home/u7380920/public_html/panguripan.com/backend/models/BackendUser.php(103): yii\db\BaseActiveRecord::findOne(1)
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(700): app\models\BackendUser::findIdentity(1)
+#15 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#17 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#18 /home/u7380920/public_html/panguripan.com/backend/views/layouts/main.php(44): yii\base\Component->__get('isGuest')
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(348): require('/home/u7380920/...')
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/u7380920/...', Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/u7380920/...', Array, Object(app\controllers\SiteController))
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#25 [internal function]: yii\web\ErrorAction->run()
+#26 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#27 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#28 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#29 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#30 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#31 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#32 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection refused
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=loca...', 'u7380920_pgrpn', '#pgrpn123123', NULL)
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('penjualanv')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('penjualanv', 'schema', false)
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('penjualanv')
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(315): yii\db\BaseActiveRecord->hasAttribute('penjualan')
+#15 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(743): yii\db\BaseActiveRecord->__set('penjualan', '40')
+#16 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(872): yii\base\Model->setAttributes(Array)
+#17 /home/u7380920/public_html/panguripan.com/backend/models/Order.php(63): yii\base\Model->load(Array)
+#18 /home/u7380920/public_html/panguripan.com/backend/controllers/OrderController.php(16): app\models\Order->search(Array)
+#19 [internal function]: app\controllers\OrderController->actionIndex()
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#23 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('order', Array)
+#24 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/u7380920/public_html/panguripan.com/backend/web/index.php(12): yii\base\Application->run()
+#26 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Connection refused in /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('penjualanv')
+#8 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('penjualanv', 'schema', false)
+#9 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('penjualanv')
+#10 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#11 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#12 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(315): yii\db\BaseActiveRecord->hasAttribute('penjualan')
+#13 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(743): yii\db\BaseActiveRecord->__set('penjualan', '40')
+#14 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Model.php(872): yii\base\Model->setAttributes(Array)
+#15 /home/u7380920/public_html/panguripan.com/backend/models/Order.php(63): yii\base\Model->load(Array)
+#16 /home/u7380920/public_html/panguripan.com/backend/controllers/OrderController.php(16): app\models\Order->search(Array)
+#17 [internal function]: app\controllers\OrderController->actionIndex()
+#18 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#20 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#21 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('order', Array)
+#22 /home/u7380920/public_html/panguripan.com/backend/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/u7380920/public_html/panguripan.com/backend/web/index.php(12): yii\base\Application->run()
+#24 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection refused
+)
+
